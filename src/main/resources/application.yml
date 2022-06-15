@@ -1,1 +1,22 @@
+springdoc:
+  version: '@springdoc.version@'
+  swagger-ui:
+    use-root-path: true
 
+spring:
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  datasource:
+    url: jdbc:h2:mem:mydb
+    username: sa
+    password: password
+    driverClassName: org.h2.Driver
+  jpa:
+    spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
+    defer-datasource-initialization: true
+
+logging:
+  level:
+    root: INFO
